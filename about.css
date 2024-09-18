@@ -44,6 +44,7 @@ body {
 
 .search-bar button:hover {
     background-color: #1a4879;
+    cursor: pointer;
 }
 
 nav ul {
