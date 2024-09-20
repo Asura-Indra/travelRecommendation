@@ -21,11 +21,13 @@ function searchResults(keyword) {
 
     // Check for matches in countries
     data.countries.forEach(country => {
+      if("country".includes(keyword))
+      {
+        console.log(keyword)
         country.cities.forEach(city => {
-            if (city.name.toLowerCase().includes(keyword)) {
-                displayResult(city.name, city.imageUrl, city.description);
-            }
+        displayResult(city.name, city.imageUrl, city.description);
         });
+      }
     });
 
     // Check for matches in temples
